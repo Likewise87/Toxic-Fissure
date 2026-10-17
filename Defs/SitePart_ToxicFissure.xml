@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <SitePartDef>
+    <defName>TSA_ToxicFissurePart</defName>
+    <label>toxic fissure</label>
+    <workerClass>TSA.ToxicQuest.SitePartWorker_ToxicFissureMap</workerClass>
+	
+    <siteTexture>World/WorldObjects/Sites/ToxicFissure</siteTexture>
+	 <expandingIconTexture>World/WorldObjects/Sites/ToxicFissure</expandingIconTexture> 
+
+    <tags>
+      <li>TSAToxicFissure</li> </tags>
+  </SitePartDef>
+</Defs>

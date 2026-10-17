@@ -1,0 +1,10 @@
+bin/
+obj/
+.vs/
+*.user
+*.suo
+tools/_workshop_stage/
+Source/obj/
+Source/bin/
+Source/.vs/
+*.pdb

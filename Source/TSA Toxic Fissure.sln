@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35919.96 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSA Toxic Fissure", "TSA Toxic Fissure.csproj", "{04786B83-1B19-FA50-4804-C8C88AF40454}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{04786B83-1B19-FA50-4804-C8C88AF40454}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04786B83-1B19-FA50-4804-C8C88AF40454}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04786B83-1B19-FA50-4804-C8C88AF40454}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04786B83-1B19-FA50-4804-C8C88AF40454}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5E63B357-794B-4A10-A5E5-76E2A0F53B48}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <GameConditionDef>
+    <defName>TSA_FissureContamination</defName>
+    <conditionClass>TSA.ToxicQuest.GameCondition_FissureContamination</conditionClass>
+    <label>fissure contamination</label>
+    <description>Toxic gases from a nearby fissure are contaminating this region. Colonists outdoors will slowly accumulate toxic buildup.</description>
+    <endMessage>The fissure contamination is clearing.</endMessage>
+    <canBePermanent>true</canBePermanent>
+    <allowUnderground>false</allowUnderground>
+    <pennedAnimalsSeekShelter>true</pennedAnimalsSeekShelter>
+  </GameConditionDef>
+</Defs>

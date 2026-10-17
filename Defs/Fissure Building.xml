@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="MoteBase">
+    <defName>Mote_GreenToxicGas</defName>
+    <graphicData>
+      <texPath>Things/Mote/Smoke</texPath>
+      <shaderType>Mote</shaderType>
+      <color>(0.2, 0.8, 0.1, 0.6)</color>
+      <drawSize>(2.2, 2.2)</drawSize>
+    </graphicData>
+    <mote>
+      <fadeInTime>0.5</fadeInTime>
+      <solidTime>2.0</solidTime>
+      <fadeOutTime>1.0</fadeOutTime>
+    </mote>
+  </ThingDef>
+
+  <ThingDef ParentName="MoteBase">
+    <defName>Mote_GreenToxicGasSmall</defName>
+    <graphicData>
+      <texPath>Things/Mote/Smoke</texPath>
+      <shaderType>Mote</shaderType>
+      <color>(0.15, 0.7, 0.1, 0.4)</color>
+      <drawSize>(1.2, 1.2)</drawSize>
+    </graphicData>
+    <mote>
+      <fadeInTime>0.2</fadeInTime>
+      <solidTime>0.4</solidTime>
+      <fadeOutTime>0.4</fadeOutTime>
+    </mote>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>ToxicFissure</defName>
+    <label>toxic fissure</label>
+    <size>(5, 5)</size>
+
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <graphicData>
+      <texPath>Things/Building/Crater/5x5</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shaderType>Transparent</shaderType> 
+      <drawSize>(5, 5)</drawSize>
+    </graphicData>
+	
+	 <building>
+      <deconstructible>false</deconstructible>
+      <isTargetable>false</isTargetable>
+      <isInert>true</isInert>
+      <claimable>false</claimable>
+      <expandHomeArea>false</expandHomeArea>
+      <crater>true</crater>
+      <canLandGravshipOn>true</canLandGravshipOn>
+    </building>
+	
+    <statBases>
+      <MaxHitPoints>1500</MaxHitPoints>
+      <Flammability>0</Flammability>
+    </statBases>
+    <damageMultipliers>
+      <li>
+        <damageDef>Bullet</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+      <li>
+        <damageDef>Bomb</damageDef>
+        <multiplier>2.0</multiplier>
+      </li>
+    </damageMultipliers>
+    <comps>
+      
+      <li Class="CompProperties_MoteEmitter">
+        <mote>Mote_GreenToxicGas</mote> 
+        <emissionInterval>100</emissionInterval>
+        <offsetMin>(-0.5, 0, -0.5)</offsetMin>
+        <offsetMax>(0.5, 0, 0.5)</offsetMax>
+      </li>
+      <li Class="CompProperties_MoteEmitter">
+        <mote>Mote_GreenToxicGas</mote> 
+        <emissionInterval>120</emissionInterval>
+        <offsetMin>(-1, 0, -1)</offsetMin>
+        <offsetMax>(1, 0, 1.1)</offsetMax>
+      </li>
+      <li Class="CompProperties_MoteEmitter">
+        <mote>Mote_GreenToxicGas</mote> 
+        <emissionInterval>110</emissionInterval>
+        <offsetMin>(-1.2, 0, 0)</offsetMin>
+        <offsetMax>(0, 0, 1.2)</offsetMax>
+      </li>
+      <li Class="CompProperties_MoteEmitter">
+        <mote>Mote_GreenToxicGas</mote> 
+        <emissionInterval>130</emissionInterval>
+        <offsetMin>(0, 0, -1.2)</offsetMin>
+        <offsetMax>(1.2, 0, 0)</offsetMax>
+      </li>
+
+      <li Class="CompProperties_MoteEmitter">
+        <mote>Mote_GreenToxicGasSmall</mote> 
+        <emissionInterval>60</emissionInterval>
+        <offsetMin>(-3, 0, -3)</offsetMin>
+        <offsetMax>(3, 0, 3)</offsetMax>
+      </li>
+      <li Class="CompProperties_MoteEmitter">
+        <mote>Mote_GreenToxicGasSmall</mote> 
+        <emissionInterval>70</emissionInterval>
+        <offsetMin>(-4, 0, -2)</offsetMin>
+        <offsetMax>(4, 0, 2)</offsetMax>
+      </li>
+      <li Class="CompProperties_MoteEmitter">
+        <mote>Mote_GreenToxicGasSmall</mote> 
+        <emissionInterval>65</emissionInterval>
+        <offsetMin>(-2, 0, -4)</offsetMin>
+        <offsetMax>(2, 0, 4)</offsetMax>
+      </li>
+      <li Class="CompProperties_MoteEmitter">
+        <mote>Mote_GreenToxicGasSmall</mote> 
+        <emissionInterval>80</emissionInterval>
+        <offsetMin>(-3.5, 0, 1)</offsetMin>
+        <offsetMax>(3.5, 0, 3.5)</offsetMax>
+      </li>
+      <li Class="CompProperties_MoteEmitter">
+        <mote>Mote_GreenToxicGasSmall</mote> 
+        <emissionInterval>75</emissionInterval>
+        <offsetMin>(-3.5, 0, -3.5)</offsetMin>
+        <offsetMax>(3.5, 0, -1)</offsetMax>
+      </li>
+      <li Class="CompProperties_MoteEmitter">
+        <mote>Mote_GreenToxicGasSmall</mote> 
+        <emissionInterval>55</emissionInterval>
+        <offsetMin>(-4.5, 0, -4.5)</offsetMin>
+        <offsetMax>(4.5, 0, 4.5)</offsetMax>
+      </li>
+
+		<li Class="TSA.ToxicQuest.CompProperties_FissureLink" />
+      <li Class="TSA.ToxicQuest.CompProperties_DestroyQuestComplete" />
+	  
+    </comps>
+  </ThingDef>
+
+</Defs>

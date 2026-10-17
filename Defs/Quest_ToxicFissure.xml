@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <QuestScriptDef>
+    <defName>TSA_ToxicFissure_Quest</defName>
+    <autoAccept>True</autoAccept>
+    <isRootSpecial>True</isRootSpecial>
+    <questNameRules>
+      <rulesStrings>
+        <li>questName->Toxic Fissure</li>
+      </rulesStrings>
+    </questNameRules>
+    <questDescriptionRules>
+      <rulesStrings>
+        <li>questDescription->A toxic fissure has opened nearby. It will densify regional pollution out to a limited radius until sealed with explosives, or until it collapses on its own.</li>
+      </rulesStrings>
+    </questDescriptionRules>
+    <root Class="QuestNode_Sequence">
+      <nodes>
+        <li Class="QuestNode_GetMap" />
+
+        <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+          <sitePartsTags>
+            <li>
+              <tag>TSAToxicFissure</tag>
+            </li>
+          </sitePartsTags>
+          <storeAs>sitePartDefs</storeAs>
+          <storeFactionAs>siteFaction</storeFactionAs>
+        </li>
+        <li Class="QuestNode_GetDefaultSitePartsParams">
+          <tile>$siteTile</tile>
+          <faction>$siteFaction</faction>
+          <sitePartDefs>$sitePartDefs</sitePartDefs>
+          <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+        </li>
+
+        <li Class="QuestNode_GenerateSite">
+          <sitePartsParams>$sitePartsParams</sitePartsParams>
+          <faction>$siteFaction</faction>
+          <tile>$siteTile</tile>
+          <storeAs>site</storeAs>
+        </li>
+        <li Class="QuestNode_SpawnWorldObjects">
+          <worldObjects>$site</worldObjects>
+        </li>
+
+        <li Class="QuestNode_Delay">
+          <delayTicks>$timeoutTicks</delayTicks>
+          <isQuestTimeout>true</isQuestTimeout>
+          <outSignalComplete>TSA_ToxicFissure_Timeout</outSignalComplete>
+        </li>
+        <li Class="QuestNode_End">
+          <inSignal>TSA_ToxicFissure_Timeout</inSignal>
+          <outcome>Fail</outcome>
+        </li>
+      </nodes>
+    </root>
+  </QuestScriptDef>
+</Defs>
